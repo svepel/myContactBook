@@ -1,0 +1,7 @@
+{
+  "name": "myContactBook",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
