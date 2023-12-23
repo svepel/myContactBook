@@ -4,11 +4,14 @@ import {
 	IonButtons,
 	IonCard,
 	IonCardContent,
+	IonCol,
 	IonContent,
+	IonGrid,
 	IonHeader,
 	IonIcon,
 	IonInput,
 	IonPage,
+	IonRow,
 	IonTitle,
 	IonToolbar,
 	useIonRouter,
@@ -39,37 +42,43 @@ const Register: React.FC = () => {
 				</IonToolbar>
 			</IonHeader>
 			<IonContent scrollY={false}>
-				<IonCard>
-					<IonCardContent>
-						<form onSubmit={doRegister}>
-							<IonInput
-								fill="outline"
-								labelPlacement="floating"
-								label="Email"
-								type="email"
-								placeholder="example@example.com"
-							></IonInput>
+				<IonGrid fixed>
+					<IonRow class="ion-justify-content-center">
+						<IonCol size="12" sizeMd="8" sizeXl="4">
+							<IonCard>
+								<IonCardContent>
+									<form onSubmit={doRegister}>
+										<IonInput
+											fill="outline"
+											labelPlacement="floating"
+											label="Email"
+											type="email"
+											placeholder="example@example.com"
+										></IonInput>
 
-							<IonInput
-								className="ion-margin-top"
-								fill="outline"
-								labelPlacement="floating"
-								label="Password"
-								type="password"
-								placeholder="example@example.com"
-							></IonInput>
+										<IonInput
+											className="ion-margin-top"
+											fill="outline"
+											labelPlacement="floating"
+											label="Password"
+											type="password"
+											placeholder="example@example.com"
+										></IonInput>
 
-							<IonButton
-								type="submit"
-								expand="block"
-								className="ion-margin-top"
-							>
-								Create my account
-								<IonIcon icon={checkmarkDoneOutline} slot="end" />
-							</IonButton>
-						</form>
-					</IonCardContent>
-				</IonCard>
+										<IonButton
+											type="submit"
+											expand="block"
+											className="ion-margin-top"
+										>
+											Create my account
+											<IonIcon icon={checkmarkDoneOutline} slot="end" />
+										</IonButton>
+									</form>
+								</IonCardContent>
+							</IonCard>
+						</IonCol>
+					</IonRow>
+				</IonGrid>
 			</IonContent>
 		</IonPage>
 	);
